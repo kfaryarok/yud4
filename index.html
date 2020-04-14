@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!--Compile via ruby-sass-->
+</head>
+
+<body dir="rtl">
+  <header class="header container">
+    <h1><b>מערכת שעות אינטראקטיבית</b></h1>
+    <h2>לכיתה י'4</h2>
+  </header>
+
+  <div class="container">
+    <p>בחרו את המגמות שלכם ולחצו על כפתור "צור מערכת".</p>
+    <form>
+      <div class="form-group">
+        <legend>מגמות מאשכול א' (מדעים)</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="phys">
+          <label class="form-check-label" for="phys">
+            פיזיקה
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="chem">
+          <label class="form-check-label" for="chem">
+            כימיה
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="bio-b1">
+          <label class="form-check-label" for="bio-b1">
+            ביולוגיה (אשכול א')
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="socio">
+          <label class="form-check-label" for="socio">
+            מדעי החברה
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="law">
+          <label class="form-check-label" for="law">
+            משפטים ופילוסופיה
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="arab">
+          <label class="form-check-label" for="arab">
+            ערבית
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <legend>מגמות מאשכול ב' (אמנויות)</legend>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="bio-b2">
+          <label class="form-check-label" for="bio-b2">
+            ביולוגיה (אשכול ב')
+          </label>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="elec">
+            <label class="form-check-label" for="elec">
+              אלקטרוניקה
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="cs">
+            <label class="form-check-label" for="cs">
+              מדעי המחשב
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="art">
+            <label class="form-check-label" for="art">
+              אמנות
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="music">
+            <label class="form-check-label" for="music">
+              מוזיקה
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="thea">
+            <label class="form-check-label" for="thea">
+              תאטרון
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="hist">
+            <label class="form-check-label" for="hist">
+              היסטוריה 5
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="sci">
+            <label class="form-check-label" for="sci">
+              לומד/ת מדע וטכנולוגיה
+            </label>
+        </div>
+      </div>
+    </form>
+    <button class="btn btn-primary" onclick="ttparseTimetable()">צור מערכת!</button>
+  </div>
+  <!--TODO: Implement form-->
+
+  <div class="container" id="result">
+    <table class="table">
+      <thead class="thead">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">א</th>
+          <th scope="col">ב</th>
+          <th scope="col">ג</th>
+          <th scope="col">ד</th>
+          <th scope="col">ה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>
+            <span class="tth physics">פיזיקה <small>גרניט גילעד</small><br></span>
+            <span class="tth biology-b1">ביולוגיה <small>אשכול א'</small><br></span>
+            <span class="tth sociology">מדעי המדינה <small>נועם נדיר</small><br></span>
+            <span class="tth philosophy">
+              מחשבת ישראל <small>ברגר שירה</small><br>
+              <strong>או</strong><br>
+              משפט וחברה <small>קינן כרמית</small><br>
+            </span>
+          </td>
+          <td><span>אנגלית <small>בריידן אווה</small><br></span></td>
+          <td><span>חינוך גופני</span><br></td>
+          <td><span>הבעה ולשון <small>עזוז דלית</small><br></span></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>
+            <span class="tth physics">פיזיקה <small>גרניט גילעד</small><br></span>
+            <span class="tth biology-b1">ביולוגיה <small>אשכול א'</small><br></span>
+            <span class="tth sociology">מדעי המדינה <small>נועם נדיר</small><br></span>
+            <span class="tth philosophy">
+              מחשבת ישראל <small>ברגר שירה</small><br>
+              <strong>או</strong><br>
+              משפט וחברה <small>קינן כרמית</small><br>
+            </span>
+          </td>
+          <td><span>אנגלית <small>בריידן אווה</small></span><br></td>
+          <td><span>היסטוריה <small>פרקש אדם</small><br></span></td>
+          <td><span>ספרות <small>גפן סיגל</small><br></span></td>
+          <td>
+            <span class="tth biology-b1">ביולוגיה <small>אשכול א'</small><br></span>
+            <span class="tth philosophy">
+              מחשבת ישראל <small>ברגר שירה</small><br>
+              <strong>או</strong><br>
+              משפט וחברה <small>קינן כרמית</small><br>
+            </span>
+            <span class="tth sociology">כלכלה <small>נחושתאי עומרי</small><br></span>
+            <span class="tth arabic">ערבית <small>זיסק יצחק</small><br></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td><span>מתמטיקה<br></span></td>
+          <td><span>היסטוריה <small>פרקש אדם</small><br></span></td>
+          <td><span>חינוך <small>נחושתאי עומרי</small><br></span></td>
+          <td>
+            <span class="tth history">היסטוריה 5 <small>נחושתאי עומרי</small><br></span>
+            <span class="tth electronic">מבוא להנדסת אלקטרוניקה <small>שוקרון ורד</small><br></span>
+            <span class="tth theater">תאטרון עיוני <small>בר-צדק עמית</small><br></span>
+            <span class="driving">זהירות בדרכים <small>שוקרון עמי</small><br></span>
+          </td>
+          <td>
+            <span class="tth biology-b1">ביולוגיה <small>אשכול א'</small><br></span>
+            <span class="tth philosophy">
+              מחשבת ישראל <small>ברגר שירה</small><br>
+              <strong>או</strong><br>
+              משפט וחברה <small>קינן כרמית</small><br>
+            </span>
+            <span class="tth sociology">כלכלה <small>נחושתאי עומרי</small><br></span>
+            <span class="tth arabic">ערבית <small>זיסק יצחק</small><br></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td><span>מתמטיקה<br></span></td>
+          <td><span>הבעה ולשון <small>עזוז דלית</small><br></span></td>
+          <td>
+            <span class="tth biology-b2">ביולוגיה <small>אשכול ב'</small><br></span>
+            <span class="tth computer">מדעי המחשב <small>ליכט מאיר</small><br></span>
+            <span class="tth arts">שפת אמנות <small>ליזוריק ענבל</small><br></span>
+          </td>
+          <td>
+            <span class="tth history">היסטוריה 5 <small>נחושתאי עומרי</small><br></span>
+            <span class="tth electronic">מבוא להנדסת אלקטרוניקה <small>שוקרון ורד</small><br></span>
+            <span class="tth theater">תאטרון עיוני <small>בר-צדק עמית</small><br></span>
+          </td>
+          <td><span>ספרות <small>גפן סיגל</small><br></span></td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>
+            <span class="tth chemistry">כימיה <small>סלוביס אריאל</small><br></span>
+          </td>
+          <td><span>מתמטיקה<br></span></td>
+          <td>
+            <span class="tth biology-b2">ביולוגיה <small>אשכול ב'</small><br></span>
+            <span class="tth computer">מדעי המחשב <small>ליכט מאיר</small><br></span>
+            <span class="tth arts">שפת אמנות <small>ליזוריק ענבל</small><br></span>
+          </td>
+          <td>
+            <span class="tth computer">מדעי המחשב <small>ליכט מאיר</small><br></span>
+            <span class="tth electronic">מערכות ספרתיות <small>בכור עמית</small><br></span>
+          </td>
+          <td>
+            <span class="tth biology-b2">ביולוגיה <small>אשכול ב'</small><br></span>
+            <span class="tth electronic">מערכות ספרתיות <small>בכור עמית</small><br></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td><span class="tth chemistry">כימיה <small>סלוביס אריאל</small><br></span></td>
+          <td><span>מתמטיקה<br></span></td>
+          <td>
+            <span class="tth computer">אסמבלי <small>ליכט מאיר</small><br></span>
+          </td>
+          <td>
+            <span class="tth computer">מדעי המחשב <small>ליכט מאיר</small><br></span>
+            <span class="tth electronic">מערכות ספרתיות <small>בכור עמית</small><br></span>
+          </td>
+          <td>
+            <span class="tth biology-b2">ביולוגיה <small>אשכול ב'</small><br></span>
+            <span class="tth musics">הרכבים<br></span>
+            <span class="tth electronic">מערכות ספרתיות <small>בכור עמית</small><br></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td></td>
+          <td></td>
+          <td>
+            <span class="tth computer">אסמבלי <small>ליכט מאיר</small><br></span>
+            <span class="tth science">מדע וטכנולוגיה <small>לא מיה</small><br></span>
+          </td>
+          <td>
+            <span class="tth physics">פיזיקה <small>גרניט גילעד</small><br></span>
+          </td>
+          <td>
+            <span class="tth musics">הרכבים<br></span>
+            <span class="tth science">מדע וטכנולוגיה <small>להב מיה</small><br></span>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td></td>
+          <td></td>
+          <td>
+            <span class="tth science">מדע וטכנולוגיה <small>לא מיה</small><br></span>
+          </td>
+          <td></td>
+          <td>
+            <span class="tth science">מדע וטכנולוגיה <small>להב מיה</small><br></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="jquery-3.4.1.slim.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.css"></script>
+  <script src="content.js"></script>
+</body>
+
+</html>
