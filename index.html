@@ -18,104 +18,108 @@
   </header>
 
   <div class="container">
-    <p>בחרו את המגמות שלכם ולחצו על כפתור "צור מערכת".</p>
-    <form>
-      <div class="form-group">
-        <legend>מגמות מאשכול א' (מדעים)</legend>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="phys">
-          <label class="form-check-label" for="phys">
-            פיזיקה
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="chem">
-          <label class="form-check-label" for="chem">
-            כימיה
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="bio-b1">
-          <label class="form-check-label" for="bio-b1">
-            ביולוגיה (אשכול א')
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="socio">
-          <label class="form-check-label" for="socio">
-            מדעי החברה
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="law">
-          <label class="form-check-label" for="law">
-            משפטים ופילוסופיה
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="arab">
-          <label class="form-check-label" for="arab">
-            ערבית
-          </label>
-        </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <p>בחרו את המגמות שלכם ולחצו על כפתור "צור מערכת".</p>
+        <form>
+          <div class="form-group">
+            <legend>מגמות מאשכול א' (מדעים)</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="phys">
+              <label class="form-check-label" for="phys">
+                פיזיקה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="chem">
+              <label class="form-check-label" for="chem">
+                כימיה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="bio-b1">
+              <label class="form-check-label" for="bio-b1">
+                ביולוגיה (אשכול א')
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="socio">
+              <label class="form-check-label" for="socio">
+                מדעי החברה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="law">
+              <label class="form-check-label" for="law">
+                משפטים ופילוסופיה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="arab">
+              <label class="form-check-label" for="arab">
+                ערבית
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <legend>מגמות מאשכול ב' (אמנויות)</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="bio-b2">
+              <label class="form-check-label" for="bio-b2">
+                ביולוגיה (אשכול ב')
+              </label>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="elec">
+                <label class="form-check-label" for="elec">
+                  אלקטרוניקה
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="cs">
+                <label class="form-check-label" for="cs">
+                  מדעי המחשב
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="art">
+                <label class="form-check-label" for="art">
+                  אמנות
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="music">
+                <label class="form-check-label" for="music">
+                  מוזיקה
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="thea">
+                <label class="form-check-label" for="thea">
+                  תאטרון
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="hist">
+                <label class="form-check-label" for="hist">
+                  היסטוריה 5
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="sci">
+              <label class="form-check-label" for="sci">
+                לומד/ת מדע וטכנולוגיה
+              </label>
+            </div>
+          </div>
+        </form>
+        <button class="btn btn-primary" onclick="ttparseTimetable()">צור מערכת!</button>
       </div>
-      <div class="form-group">
-        <legend>מגמות מאשכול ב' (אמנויות)</legend>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="bio-b2">
-          <label class="form-check-label" for="bio-b2">
-            ביולוגיה (אשכול ב')
-          </label>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="elec">
-            <label class="form-check-label" for="elec">
-              אלקטרוניקה
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="cs">
-            <label class="form-check-label" for="cs">
-              מדעי המחשב
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="art">
-            <label class="form-check-label" for="art">
-              אמנות
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="music">
-            <label class="form-check-label" for="music">
-              מוזיקה
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="thea">
-            <label class="form-check-label" for="thea">
-              תאטרון
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="hist">
-            <label class="form-check-label" for="hist">
-              היסטוריה 5
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="sci">
-            <label class="form-check-label" for="sci">
-              לומד/ת מדע וטכנולוגיה
-            </label>
-        </div>
-      </div>
-    </form>
-    <button class="btn btn-primary" onclick="ttparseTimetable()">צור מערכת!</button>
+    </div>
   </div>
-  <!--TODO: Implement form-->
 
   <div class="container" id="result">
     <table class="table">
@@ -296,8 +300,11 @@
     </table>
   </div>
 
-  <footer>
-    <p>&copy; רותם מוזס 2020. הזכויות על מערכת השעות שמורות לכפר הירוק. הקוד ניתן להפצה תחת רשיון MIT. ניתן להשיג אותו <a href="https://github.com/kfaryarok/yud4">כאן</a>.</p>
+  <footer class="footer container">
+    <p>&copy; רותם מוזס 2020. הזכויות על מערכת השעות שמורות לכפר הירוק. הקוד ניתן להפצה תחת רשיון MIT. ניתן להשיג אותו
+      <a href="https://github.com/kfaryarok/yud4">כאן</a>.</p>
+    <p dir="ltr" class="text-right">&copy; Rotem Moses 2020. The rights to the timetable belong to HaKfar HaYarok.
+      The code is available under the MIT license <a href="https://github.com/kfaryarok/yud4">here</a>.</p>
   </footer>
 
   <script src="jquery-3.4.1.slim.min.js"></script>
