@@ -6,7 +6,11 @@
 span {
   color: black;
 
-  .tth {
+  &.tth {
     display: none;
   }
+}
+
+div.hidden {
+  display: none;
 }

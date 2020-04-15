@@ -122,7 +122,10 @@
   </div>
 
   <div class="container" id="result">
-    <table class="table">
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-outline-secondary" onclick="ttCSV()">ייצוא לאקסל</button>
+    </div>
+    <table class="table" id="timetable">
       <thead class="thead">
         <tr>
           <th scope="col">#</th>
@@ -300,6 +303,103 @@
     </table>
   </div>
 
+  <div class="hidden">
+    <table id="raw">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>א</th>
+          <th>ב</th>
+          <th>ג</th>
+          <th>ד</th>
+          <th>ה</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="3a"></td>
+          <td>אנגלית</td>
+          <td>חינוך גופני</td>
+          <td>הבעה ולשון</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="4a"></td>
+          <td>אנגלית</td>
+          <td>היסטוריה</td>
+          <td>ספרות</td>
+          <td id="4e"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>מתמטיקה</td>
+          <td>היסטוריה</td>
+          <td>חינוך</td>
+          <td id="5d">זהירות בדרכים</td>
+          <td id="5e"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>מתמטיקה</td>
+          <td>הבעה ולשון</td>
+          <td id="6c"></td>
+          <td id="6d"></td>
+          <td>ספרות</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td id="7a"></td>
+          <td>מתמטיקה</td>
+          <td id="7c"></td>
+          <td id="7d"></td>
+          <td id="7e"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td id="8a"></td>
+          <td>מתמטיקה</td>
+          <td id="8c"></td>
+          <td id="8d"></td>
+          <td id="8e"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td id="9a"></td>
+          <td id="9b"></td>
+          <td id="9c"></td>
+          <td id="9d"></td>
+          <td id="9e"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td id="10a"></td>
+          <td id="10b"></td>
+          <td id="10c"></td>
+          <td id="10d"></td>
+          <td id="10e"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <footer class="footer container">
     <p>&copy; רותם מוזס 2020. הזכויות על מערכת השעות שמורות לכפר הירוק. הקוד ניתן להפצה תחת רשיון MIT. ניתן להשיג אותו
       <a href="https://github.com/kfaryarok/yud4">כאן</a>.</p>
@@ -307,9 +407,10 @@
       The code is available under the MIT license <a href="https://github.com/kfaryarok/yud4">here</a>.</p>
   </footer>
 
-  <script src="jquery-3.4.1.slim.min.js"></script>
+  <script src="jquery-3.5.0.min.js"></script>
   <script src="popper.min.js"></script>
-  <script src="bootstrap.min.css"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="jquery.TableCSVExport.js"></script>
   <script src="content.js"></script>
 </body>
 
